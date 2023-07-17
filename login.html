@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <form id="login-form" onsubmit="login(event)">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required><br><br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br><br>
+  <div id="captcha-container"></div><br>
+  <button type="button" id="refreshButton">Refresh</button>
+  <input type="text" id="captcha-input" placeholder="Masukkan Captcha" required><br><br>
+  <input type="submit" value="Login">
+</form>
+  </div>
+  
+<script src="javascript.js"></script>
+
+</body>
+</html>
