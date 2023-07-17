@@ -79,6 +79,10 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+  <div id="notifikasi" style="display: none;" class="alert alert-success mt-3" role="alert">
+  Terima kasih telah membeli produk Yamaha!
+</div>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     // Tambahkan event listener untuk menutup formulir saat tombol silang diklik
@@ -88,5 +92,27 @@
       document.querySelector('.container').style.display = 'none';
     });
   </script>
+  <script>
+  // Tambahkan event listener untuk menangani pengiriman formulir
+  document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Menghentikan pengiriman formulir
+
+    // Tampilkan notifikasi
+    document.getElementById('notifikasi').style.display = 'block';
+
+    // Redirect pengguna kembali ke halaman web asal setelah 3 detik
+    setTimeout(function() {
+      window.location.href = "index.html"; // Ganti "index.html" dengan halaman web asal Anda
+    }, 3000); // Waktu dalam milidetik sebelum redirect dilakukan (misalnya 3000 untuk 3 detik)
+  });
+
+  // Tambahkan event listener untuk menutup formulir saat tombol silang diklik
+  document.querySelector('.close').addEventListener('click', function() {
+    // Menggunakan JavaScript Vanilla, Anda dapat menyesuaikan fungsi ini sesuai dengan kebutuhan Anda
+    // Di sini, kita hanya menyembunyikan elemen kontainer formulir
+    document.querySelector('.container').style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
